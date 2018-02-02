@@ -1,0 +1,37 @@
+" key mapping {
+    inoremap @@ <Esc>
+    inoremap hh <Left>
+    inoremap jj <Down>
+    inoremap kk <Up>
+    inoremap ll <Right>
+
+" }
+" Plugins {
+    " NerdTree {
+        if isdirectory(expand("~/.vim/bundle/nerdtree"))
+            autocmd vimenter * NERDTreeFind
+            autocmd BufEnter * if (winnr("$")==1 && exists("b:NERDTree") && b:NERDTree.isTabTree())|q|endif
+        endif
+    " }
+
+    " neocomplete {
+        if exists('g:spf13_noninvasive_completion')
+            inoremap <expr><C-g> neocomplete#undo_completion()
+            inoremap <expr><C-l> neocomplete#complete_common_string()
+        endif
+    " }
+
+    " undotree {
+        nnoremap <F5> :UndotreeToggle<CR>
+    " }
+
+    " ctags{
+        set tags+=$HOME/.ctags.d/ui_tags
+        set tags+=$HOME/.ctags.d/uli_tags
+        set tags+=$HOME/.ctags.d/vins_tags
+    " }
+    
+    " cscope{
+        cscope add $HOME/vins_ws/src/VINS-Mono/cscope.out $HOME/vins_ws/src/VINS-Mono
+    }"
+" }

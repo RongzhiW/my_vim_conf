@@ -1,0 +1,27 @@
+
+" spf13 {
+    if !exists("g:spf13_bundle_groups")
+        let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python',]
+    endif
+    let g:spf13_edit_config_mapping='<Leader>ev'
+    let g:spf13_apply_config_mapping='<Leader>sv'
+" }
+" Plugins {
+
+    " nerdcommenter {
+        let g:NERDSpaceDelims = 1
+        let g:NERDCompactSexyComs = 1
+        let g:NERDDefaultAlign = 'left'
+        let g:NERDCommentEmptyLines = 1
+        let g:NERDTrimTrailingWhitespace = 1
+    " }
+
+    " neocomplete {
+        let g:spf13_noninvasive_completion=1
+    " }
+
+
+    " undotree {
+        let g:undotree_WindowLayout=2
+    " }
+" }
